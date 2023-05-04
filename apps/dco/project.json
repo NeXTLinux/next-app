@@ -1,6 +1,6 @@
 {
   "name": "dco",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/dco/src",
   "projectType": "library",
   "targets": {
@@ -18,7 +18,7 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/dco/**/*.ts"]
+        "lintFilePatterns": ["apps/dco/**/*.js"]
       }
     },
     "test": {
