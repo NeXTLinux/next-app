@@ -1,0 +1,16 @@
+
+{
+  "name": "@init/lib",
+  "private": true,
+  "version": "0.0.1",
+  "repository": "github.com/nextlinux/next-app",
+  "script": {
+     "start": "probot run ./index.js",
+     "test": "jest --coverage",
+     "posttest": "npm run lint"
+  },
+  "engine": {
+    "node": ">=14"
+  },
+  "type": "commonjs"
+}
