@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
-    "paths": {
-      "@init/dco": ["apps/dco/src/index.ts"],
-      "@init/lib": ["lib/src/index.ts"]
-    }
+    "jsx": "react-jsx",
+    "allowJs": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true
   },
   "files": [],
   "include": [],
@@ -16,5 +16,5 @@
       "path": "./tsconfig.spec.json"
     }
   ],
-  "extends": "./tsconfig.base.json"
+  "extends": "../../tsconfig.base.json"
 }

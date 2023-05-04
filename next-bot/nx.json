@@ -1,12 +1,17 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "init",
+  "npmScope": "next-bot",
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx-cloud",
       "options": {
-        "cacheableOperations": [],
-        "accessToken": "YjVkNjc2YzQtYzBjYy00YThhLTk2M2EtMmRlOWNkZWFlMGFhfHJlYWQtd3JpdGU="
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "M2JhZjQ1ZTMtNjg4OC00NmRmLTkxMTMtMTc4YTY2ZThmYjVkfHJlYWQtd3JpdGU="
       }
     }
   },
@@ -33,12 +38,6 @@
         "{workspaceRoot}/.eslintrc.json",
         "{workspaceRoot}/.eslintignore"
       ]
-    },
-    "e2e": {
-      "inputs": [
-        "default",
-        "^production"
-      ]
     }
   },
   "namedInputs": {
@@ -53,27 +52,6 @@
       "!{projectRoot}/jest.config.[jt]s",
       "!{projectRoot}/.eslintrc.json"
     ],
-    "sharedGlobals": [
-      "{workspaceRoot}/babel.config.json"
-    ]
-  },
-  "generators": {
-    "@nx/react": {
-      "application": {
-        "style": "css",
-        "linter": "eslint",
-        "bundler": "webpack",
-        "babel": true
-      },
-      "component": {
-        "style": "css"
-      },
-      "library": {
-        "style": "css",
-        "linter": "eslint",
-        "unitTestRunner": "jest"
-      }
-    }
-  },
-  "defaultBase": "main"
+    "sharedGlobals": []
+  }
 }
