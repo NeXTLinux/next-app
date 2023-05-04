@@ -15,6 +15,7 @@
     "baseUrl": ".",
     "esModuleInterop": true,
     "paths": {
+      "@init/dco": ["apps/dco/src/index.ts"],
       "@init/lib": ["lib/src/index.ts"]
     }
   },

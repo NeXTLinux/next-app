@@ -1,10 +1,6 @@
-
 {
-  "name": "@init/lib",
-  "private": true,
+  "name": "@init/dco",
   "version": "0.0.1",
-  "license": "ISC",
-  "repository": "github.com/nextlinux/next-app",
   "scripts": {
     "start": "probot run ./index.js",
     "test": "jest --coverage",
