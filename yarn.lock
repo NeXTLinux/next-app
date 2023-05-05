@@ -1740,13 +1740,6 @@
   dependencies:
     "@nx/express" "16.1.0"
 
-"@nrwl/jest@16.0.3":
-  version "16.0.3"
-  resolved "https://registry.yarnpkg.com/@nrwl/jest/-/jest-16.0.3.tgz#dc5fcc8a4395e5ab43e6d9d7ff10d812ee18a33b"
-  integrity sha512-rIwmz8IXc0X0MPajhhmfcCJEPbPv+k3ozmv/nD7cjvD82Ix9ZgD3kCOclpVWBVgKf8GU1mCHLP5YgrruKuuz2Q==
-  dependencies:
-    "@nx/jest" "16.0.3"
-
 "@nrwl/jest@16.1.0", "@nrwl/jest@^16.1.0":
   version "16.1.0"
   resolved "https://registry.yarnpkg.com/@nrwl/jest/-/jest-16.1.0.tgz#f9892d85c22c6accab121a8fd525dfe1eae33305"
@@ -1798,13 +1791,6 @@
   integrity sha512-LABxlfLgNLPKNnPd6oyY9lFrlOQv9V13wDn7DXpIDuBas0ZXpTqwz4qEwZIdoP18XCSywMSWOYeXh6yZbMyD/g==
   dependencies:
     "@nx/next" "16.1.0"
-
-"@nrwl/node@16.0.3":
-  version "16.0.3"
-  resolved "https://registry.yarnpkg.com/@nrwl/node/-/node-16.0.3.tgz#f94b1dc8e11dd5a9cb315884b92067d7bd00dc68"
-  integrity sha512-TUWbaxUoVNBjq/3XnWo9y04AAyjOrQwp+fdCWmwQ33VR6zQncJNzg1CcTqDRlxJYsqwoAJwgoyGAD9eczjU6GA==
-  dependencies:
-    "@nx/node" "16.0.3"
 
 "@nrwl/node@16.1.0":
   version "16.1.0"
@@ -2006,26 +1992,6 @@
     "@nx/devkit" "16.1.0"
     "@nx/node" "16.1.0"
 
-"@nx/jest@16.0.3":
-  version "16.0.3"
-  resolved "https://registry.yarnpkg.com/@nx/jest/-/jest-16.0.3.tgz#1bf7272741a5ca2a46c45037567a1e119cb74d48"
-  integrity sha512-j8Ifkf7RTngGG4xh1/+ryaok+7qEN1frUm96oZN52m1ioAVBIKfCG0VtIicafDhFQ4xTOpHvCY/yB0B90kF2ug==
-  dependencies:
-    "@jest/reporters" "^29.4.1"
-    "@jest/test-result" "^29.4.1"
-    "@nrwl/jest" "16.0.3"
-    "@nx/devkit" "16.0.3"
-    "@nx/js" "16.0.3"
-    "@phenomnomnominal/tsquery" "~5.0.1"
-    chalk "^4.1.0"
-    dotenv "~10.0.0"
-    identity-obj-proxy "3.0.0"
-    jest-config "^29.4.1"
-    jest-resolve "^29.4.1"
-    jest-util "^29.4.1"
-    resolve.exports "1.1.0"
-    tslib "^2.3.0"
-
 "@nx/jest@16.1.0":
   version "16.1.0"
   resolved "https://registry.yarnpkg.com/@nx/jest/-/jest-16.1.0.tgz#b6bd53b6b44bf9a451b43d7a7281312489684bbd"
@@ -2154,19 +2120,6 @@
     tsconfig-paths-webpack-plugin "4.0.0"
     url-loader "^4.1.1"
     webpack-merge "^5.8.0"
-
-"@nx/node@16.0.3":
-  version "16.0.3"
-  resolved "https://registry.yarnpkg.com/@nx/node/-/node-16.0.3.tgz#00e093c2089d3338fa0e44ef20af4bbe9a6098bf"
-  integrity sha512-SdBXpYNkApk36LmLS9BClJC/fLTq/Sk+Zo9LN21uxeE0RZqQJ2l+R1GlMqrtH0Uf7Syu97XCWFnumPak8pCtSw==
-  dependencies:
-    "@nrwl/node" "16.0.3"
-    "@nx/devkit" "16.0.3"
-    "@nx/jest" "16.0.3"
-    "@nx/js" "16.0.3"
-    "@nx/linter" "16.0.3"
-    "@nx/workspace" "16.0.3"
-    tslib "^2.3.0"
 
 "@nx/node@16.1.0":
   version "16.1.0"
