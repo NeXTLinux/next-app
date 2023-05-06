@@ -6,7 +6,7 @@ import {
   ApplicationFunction,
   ApplicationFunctionOptions,
 } from "./types";
-import { Nextbot } from "./nextbot";
+import { Nextbot } from "./src/nextbot";
 import { Server } from "./server/server";
 import { NextbotOctokit } from "./octokit/nextbot-octokit";
 import { run } from "./run";

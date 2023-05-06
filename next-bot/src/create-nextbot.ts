@@ -3,7 +3,7 @@ import { getPrivateKey } from "@nextbot/get-private-key";
 
 import { getLog, GetLogOptions } from "./helpers/get-log";
 import { Options } from "./types";
-import { Nextbot } from "./nextbot";
+import { Nextbot } from "./src/nextbot";
 
 type CreateNextbotOptions = {
   overrides?: Options;

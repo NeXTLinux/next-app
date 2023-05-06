@@ -6,7 +6,7 @@
   "license": "ISC",
   "repository": "github.com/nextlinux/next-app",
   "scripts": {
-    "start": "probot run ./index.js",
+    "start": "Nextbot run ./index.js",
     "test": "jest --coverage",
     "posttest": "npm run lint",
     "lint": "prettier --check '{lib,test,docs}/**/*.{js,json,md}' index.js *.md package.json app.yml",
@@ -18,7 +18,7 @@
   "dependencies": {
     "email-validator": "^2.0.3",
     "prettier": "^2.5.1",
-    "probot": "^12.1.1"
+    "Nextbot": "^12.1.1"
   },
   "devDependencies": {
     "jest": "^27.3.1",

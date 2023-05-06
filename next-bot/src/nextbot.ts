@@ -3,12 +3,12 @@ import { Logger } from "pino";
 import { EmitterWebhookEvent as WebhookEvent } from "@octokit/webhooks";
 
 import { aliasLog } from "./helpers/alias-log";
-import { auth } from "./auth";
+import { auth } from "../auth";
 import { getLog } from "./helpers/get-log";
 import { getNextbotOctokitWithDefaults } from "./octokit/get-nextbot-octokit-with-defaults";
 import { getWebhooks } from "./octokit/get-webhooks";
-import { NextbotOctokit } from "./octokit/nextbot-octokit";
-import { VERSION } from "./version";
+import { NextbotOctokit } from "../octokit/nextbot-octokit";
+import { VERSION } from "../version";
 import {
   ApplicationFunction,
   ApplicationFunctionOptions,
@@ -16,7 +16,7 @@ import {
   Options,
   NextbotWebhooks,
   State,
-} from "./types";
+} from "../types";
 
 export type Constructor<T> = new (...args: any[]) => T;
 

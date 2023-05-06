@@ -785,25 +785,25 @@
     "@octokit/webhooks-types" "5.8.0"
     aggregate-error "^3.1.0"
 
-"@probot/get-private-key@^1.1.0":
+"@Nextbot/get-private-key@^1.1.0":
   version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@probot/get-private-key/-/get-private-key-1.1.1.tgz#12bf61d00a15760d9b0bd713a794f9c4ba4ad5d3"
+  resolved "https://registry.yarnpkg.com/@Nextbot/get-private-key/-/get-private-key-1.1.1.tgz#12bf61d00a15760d9b0bd713a794f9c4ba4ad5d3"
   integrity sha512-hOmBNSAhSZc6PaNkTvj6CO9R5J67ODJ+w5XQlDW9w/6mtcpHWK4L+PZcW0YwVM7PpetLZjN6rsKQIR9yqIaWlA==
   dependencies:
     "@types/is-base64" "^1.1.0"
     is-base64 "^1.1.0"
 
-"@probot/octokit-plugin-config@^1.0.0":
+"@Nextbot/octokit-plugin-config@^1.0.0":
   version "1.1.6"
-  resolved "https://registry.yarnpkg.com/@probot/octokit-plugin-config/-/octokit-plugin-config-1.1.6.tgz#c450a746f082c8ec9b6d1a481a71778f7720fa9b"
+  resolved "https://registry.yarnpkg.com/@Nextbot/octokit-plugin-config/-/octokit-plugin-config-1.1.6.tgz#c450a746f082c8ec9b6d1a481a71778f7720fa9b"
   integrity sha512-L29wmnFvilzSfWn9tUgItxdLv0LJh2ICjma3FmLr80Spu3wZ9nHyRrKMo9R5/K2m7VuWmgoKnkgRt2zPzAQBEQ==
   dependencies:
     "@types/js-yaml" "^4.0.5"
     js-yaml "^4.1.0"
 
-"@probot/pino@^2.2.0":
+"@Nextbot/pino@^2.2.0":
   version "2.3.5"
-  resolved "https://registry.yarnpkg.com/@probot/pino/-/pino-2.3.5.tgz#f1d051edfc080c9183592e90ac8ae03c14e3951a"
+  resolved "https://registry.yarnpkg.com/@Nextbot/pino/-/pino-2.3.5.tgz#f1d051edfc080c9183592e90ac8ae03c14e3951a"
   integrity sha512-IiyiNZonMw1dHC4EAdD55y5owV733d9Gll/IKsrLikB7EJ54+eMCOtL/qo+OmgWN9XV3NTDfziEQF2og/OBKog==
   dependencies:
     "@sentry/node" "^6.0.0"
@@ -3192,9 +3192,9 @@ object-inspect@^1.9.0:
   resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.12.3.tgz#ba62dffd67ee256c8c086dfae69e016cd1f198b9"
   integrity sha512-geUvdk7c+eizMNUDkRpW1wJwgfOiOeHbxBR/hLXK1aT6zmVSO0jsQcs7fj6MGw89jC/cjGfLcNOrtMYtGqm81g==
 
-octokit-auth-probot@^1.2.2:
+octokit-auth-Nextbot@^1.2.2:
   version "1.2.9"
-  resolved "https://registry.yarnpkg.com/octokit-auth-probot/-/octokit-auth-probot-1.2.9.tgz#835178f2f13209687c23e794af84b373f234b01a"
+  resolved "https://registry.yarnpkg.com/octokit-auth-Nextbot/-/octokit-auth-Nextbot-1.2.9.tgz#835178f2f13209687c23e794af84b373f234b01a"
   integrity sha512-mMjw6Y760EwJnW2tSVooJK8BMdsG6D40SoCclnefVf/5yWjaNVquEu8NREBVWb60OwbpnMEz4vREXHB5xdMFYQ==
   dependencies:
     "@octokit/auth-app" "^4.0.2"
@@ -3478,9 +3478,9 @@ pretty-format@^27.5.1:
     ansi-styles "^5.0.0"
     react-is "^17.0.1"
 
-probot@^12.1.1:
+Nextbot@^12.1.1:
   version "12.3.0"
-  resolved "https://registry.yarnpkg.com/probot/-/probot-12.3.0.tgz#0e379b522d4e30e78056abf8c8f98bafdf54d9c3"
+  resolved "https://registry.yarnpkg.com/Nextbot/-/Nextbot-12.3.0.tgz#0e379b522d4e30e78056abf8c8f98bafdf54d9c3"
   integrity sha512-I7qpD6myIt5eEqAOv14mrbdh4HdLG1MQgCHGQJpIj6rdDeQaacQDL2THlMSqIU2VBcdIRpLqNv7D0z2NG0la3w==
   dependencies:
     "@octokit/core" "^3.2.4"
@@ -3491,9 +3491,9 @@ probot@^12.1.1:
     "@octokit/plugin-throttling" "^3.3.4"
     "@octokit/types" "^8.0.0"
     "@octokit/webhooks" "^9.8.4"
-    "@probot/get-private-key" "^1.1.0"
-    "@probot/octokit-plugin-config" "^1.0.0"
-    "@probot/pino" "^2.2.0"
+    "@Nextbot/get-private-key" "^1.1.0"
+    "@Nextbot/octokit-plugin-config" "^1.0.0"
+    "@Nextbot/pino" "^2.2.0"
     "@types/express" "^4.17.9"
     "@types/ioredis" "^4.27.1"
     "@types/pino" "^6.3.4"
@@ -3508,7 +3508,7 @@ probot@^12.1.1:
     ioredis "^4.27.8"
     js-yaml "^3.14.1"
     lru-cache "^6.0.0"
-    octokit-auth-probot "^1.2.2"
+    octokit-auth-Nextbot "^1.2.2"
     pino "^6.7.0"
     pino-http "^5.3.0"
     pkg-conf "^3.1.0"
