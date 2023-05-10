@@ -2407,6 +2407,11 @@
     yargs "^17.6.2"
     yargs-parser "21.1.1"
 
+"@nxkit/playwright@3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@nxkit/playwright/-/playwright-3.0.1.tgz#3934faa9c23c91837cbaef9086bbadb2b3ff3137"
+  integrity sha512-RqBJuQyTNQzwpzzrAw0PIiENhNyty19QyLXzlXAHWwC3At0peaAncMGvE+eWsh3DiOvi5LEPnx5NqDqdD4Bxyw==
+
 "@octokit/auth-app@^4.0.2":
   version "4.0.9"
   resolved "https://registry.yarnpkg.com/@octokit/auth-app/-/auth-app-4.0.9.tgz#66500c8f66545d970a19123b9b364c678c972d6b"

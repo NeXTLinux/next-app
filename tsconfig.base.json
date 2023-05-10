@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@init/action-lib/sbom-action": ["action-lib/sbom-action/src/index.ts"],
       "@init/ui": ["ui/src/index.ts"]
     }
   },
