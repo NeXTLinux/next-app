@@ -1,0 +1,70 @@
+name: Update snapshots
+on:
+  issue_comment:
+    types: [created]
+jobs:
+  update-snapshots:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.issue.pull_request && contains(github.event.comment.body, '/update-snapshots') }}
+    services:
+      registry:
+        image: registry:2
+        ports:
+          - 5000:5000
+    steps:
+      - uses: actions/github-script@v3
+        id: get-pr
+        with:
+          script: |
+            const request = {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number
+            }
+            core.info(`Getting PR #${request.pull_number} from ${request.owner}/${request.repo}`)
+            try {
+              const result = await github.pulls.get(request)
+              return result.data
+            } catch (err) {
+              core.setFailed(`Request failed with error ${err}`)
+            }
+      - name: Generate token
+        uses: tibdex/github-app-token@v1
+        id: generate-token
+        with:
+          app_id: ${{ secrets.TOKEN_APP_ID }}
+          private_key: ${{ secrets.TOKEN_APP_PRIVATE_KEY }}
+      - name: Add seen reaction
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          comment-id: ${{ github.event.comment.id }}
+          reactions: eyes
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+          repository: ${{ fromJSON(steps.get-pr.outputs.result).head.repo.full_name }}
+          ref: ${{ fromJSON(steps.get-pr.outputs.result).head.ref }}
+      - name: Build images
+        run: |
+          for distro in alpine centos debian; do
+            docker build -t localhost:5000/match-coverage/$distro ./tests/fixtures/image-$distro-match-coverage
+            docker push localhost:5000/match-coverage/${distro}:latest
+          done
+      - name: Update snapshots
+        run: |
+          # install husky hooks and dependencies:
+          npm install
+          # update snapshots
+          npm run test:update-snapshots
+      - name: Commit snapshots
+        run: |
+          git config --global user.name 'nextlinux-actions'
+          git config --global user.email 'nextlinux-actions@users.noreply.github.com'
+          git commit -s -am "chore(test): update snapshots"
+          git push
+      - name: Add success reaction
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          comment-id: ${{ github.event.comment.id }}
+          reactions: "+1"

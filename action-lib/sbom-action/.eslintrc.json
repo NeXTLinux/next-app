@@ -1,18 +1,26 @@
 {
-  "extends": ["plugin:@nx/react", "../../.eslintrc.base.json"],
-  "ignorePatterns": ["!**/*"],
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "rules": {}
-    },
-    {
-      "files": ["*.ts", "*.tsx"],
-      "rules": {}
-    },
-    {
-      "files": ["*.js", "*.jsx"],
-      "rules": {}
-    }
-  ]
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/quotes": [
+      "error",
+      "double",
+      { "allowTemplateLiterals": true }
+    ],
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off"
+  },
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "es6": true
+  }
 }

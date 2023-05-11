@@ -1,0 +1,41 @@
+name: PR for latest Gosbom release
+on:
+  schedule:
+    # 7:04 UTC (2:04 am EST)
+    - cron: "4 7 * * *"
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  upgrade-gosbom:
+    runs-on: ubuntu-latest
+    if: github.repository == 'nextlinux/sbom-action'
+    steps:
+      - uses: actions/checkout@v3
+      - name: Get latest Gosbom version
+        id: latest-version
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          LATEST_VERSION=$(gh release view --json name -q '.name' -R nextlinux/gosbom)
+          echo "export const VERSION = \"$LATEST_VERSION\";" > src/GosbomVersion.ts
+          # install husky hooks and dependencies:
+          npm install
+          # export the version for use with create-pull-request:
+          echo "LATEST_VERSION=$LATEST_VERSION" >> $GITHUB_OUTPUT
+      - uses: tibdex/github-app-token@v1
+        id: generate-token
+        with:
+          app_id: ${{ secrets.TOKEN_APP_ID }}
+          private_key: ${{ secrets.TOKEN_APP_PRIVATE_KEY }}
+      - uses: peter-evans/create-pull-request@v4
+        with:
+          signoff: true
+          delete-branch: true
+          branch: auto/latest-gosbom
+          labels: dependencies
+          commit-message: "chore(deps): update Gosbom to ${{ steps.latest-version.outputs.LATEST_VERSION }}"
+          title: "chore(deps): update Gosbom to ${{ steps.latest-version.outputs.LATEST_VERSION }}"
+          body: "Update Gosbom to ${{ steps.latest-version.outputs.LATEST_VERSION }}"
+          token: ${{ steps.generate-token.outputs.token }}
