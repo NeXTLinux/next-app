@@ -10,7 +10,7 @@
   "private": true,
   "dependencies": {
     "@nrwl/angular": "16.1.0",
-    "@nrwl/express": "16.1.0",
+    "@nrwl/express": "16.2.0-beta.3",
     "@nrwl/jest": "^16.1.0",
     "@nrwl/lint": "^8.4.0-beta.4",
     "@nrwl/next": "16.1.0",
@@ -93,3 +93,4 @@
     "targets": {}
   }
 }
+
